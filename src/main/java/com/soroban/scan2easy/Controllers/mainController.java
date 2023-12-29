@@ -33,5 +33,13 @@ public class mainController {
 	public String layoutTest() {
 		return "layoutTest";
 	}
+	
+	@GetMapping("/data")
+	public String dataPage(Model model) {				
+		
+		model.addAttribute("title", "Titelname");
+		
+		return "data";
+	}
 }
 	

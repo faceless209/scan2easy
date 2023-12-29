@@ -6,10 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.soroban.scan2easy.Models.loginData;
+import com.soroban.scan2easy.services.UserService;
 
 @Controller
-public class loginController {
-
+public class loginController {	
+	
 	@GetMapping("/login")
 	public String login(Model model){
 		
@@ -19,9 +20,11 @@ public class loginController {
 	}
 	
 	@PostMapping("/processLogin")
-	public String pcocessLogin(loginData loginData, Model model) {
-		String t = "Text";
-		
-		return "login";
+	public String pcocessLogin(loginData loginData, Model model, UserService userService ) {
+		String resultPage = "login";
+		if ( userService.getUserByString(loginData.getLoginName()) )
+			resultPage ="data";
+
+		return resultPage;
 	}
 }
