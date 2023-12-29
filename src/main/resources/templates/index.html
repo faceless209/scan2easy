@@ -15,14 +15,25 @@
 			</h1>
 		</p>
 	</div>
-	<div class="container mt-2 p-1 rounded-2 bg-primary text-white">
+	<div class="container mt-2 p-0 rounded-2 bg-primary text-white">
 		<div class="row align-items-start">
 			<div class="col">
 				<h5 th:text="${customer.name}">Stelter GmbH</h5>
 				<p th:text="${customer.nummer}">D10831</p>
+				<p>Telefon<a href="tel:01522 2753243">Handy: 01522 2753243</a></p>
 			</div>
 			<div class="col">
-				fill in some Text
+				<div class="container">
+					<div class="roaw align-items-start">
+						<p class="lead mb-1">Software Info</p>						
+					</div>
+					<div class="col-3">
+						<p class="m-0">ATOSS</p>
+					</div>
+					<div class="col">
+						<p class="m-0">Version 10.5.2</p>
+					</div>					
+				</div>				
 				<!--
 				<h4 th:text="${Kunde.Name}">KundeName</h4>
 				<p th:text="${Kunde.Nummer}">Kundennummer</p>

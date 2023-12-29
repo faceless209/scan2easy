@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:replace="~{layouts/commonHeader :: header}">
+		<p>Header to be replaced</p>
+	</div>	
+	
+	<div>
+		<p>Content to be replaced</p>
+	</div>	
+	
+	<div th:insert="~{layouts/commonFooter :: footer}">
+		<p>Footer to be replaced</p>
+	</div>	
+</body>
+</html>
